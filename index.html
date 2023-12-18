@@ -38,7 +38,7 @@
       const tiles = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
-          maxZoom: 13,
+          maxZoom: 12,
           attribution:
             '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         }
@@ -57,7 +57,7 @@
           l.bindPopup(out.join("<br />"));
         }
       }
-      var jsonTest = new L.GeoJSON.AJAX(["./map (19).geojson"], {
+      var jsonTest = new L.GeoJSON.AJAX(["./kotaKabupatenBengkulu.geojson"], {
         onEachFeature: popUp,
         style: myStyle,
       }).addTo(map);
